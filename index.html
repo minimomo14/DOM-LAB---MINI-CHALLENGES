@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-mini-challenge</title>
+</head>
+<body>
+    <form>Vending Machine
+
+    <p id="total"></p>
+
+    <button type="button" id="lime" value="$2.00">LIME COLA $2.00</button>
+    <button type="button" id="salt" value="$3.00">SALTED PEANUTS $3.00</button>
+    <button type="button" id="chocolate" value="$4.00">CHOCOLATE BAR $4.00</button>
+    <button type="button" id="fruit" value="$6.00">FRUIT GUMMIES $6.00</button>
+<style>
+    button {
+  background-color: rgb(233, 171, 182);
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: slategray;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+</style>
+</form>
+
+<div></div>
+<div></div>
+<div></div>
+
+<form id="form">MAKE MONEY >>>>>>>>>
+<p>
+  <label for="how-many">How many?
+    <input type="number" id="how-many">
+  </label>  
+</p>
+
+<p>
+   <label for="coinType">Which coin?</label>
+    <select id="coinType">
+    <option>Penny</option>
+    <option>Nickel</option>
+    <option>Dime</option>
+    <option>Quarter</option>
+    </select> 
+</p>
+<p>
+    <button type="submit" id="click-button" onclick="myFunction()">Make that money !!!</button>
+    <button id="click-remove">Remove coin</button>
+</p>
+</form>
+<style>
+  #circle {
+  width: 50px;
+  margin: 0;
+  padding: 25px;
+  background-color: rgb(29, 209, 191);
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+  }
+</style>
+
+<div id="circle"></div>
+
+<script src="script.js"></script>   
+
+</body>
+</html>

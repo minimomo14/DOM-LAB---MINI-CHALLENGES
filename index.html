@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
     <title>DOM-mini-challenge</title>
 </head>
 <body>
@@ -11,12 +12,12 @@
 
     <p id="total"></p>
 
-    <button type="button" id="lime" value="$2.00">LIME COLA $2.00</button>
-    <button type="button" id="salt" value="$3.00">SALTED PEANUTS $3.00</button>
-    <button type="button" id="chocolate" value="$4.00">CHOCOLATE BAR $4.00</button>
-    <button type="button" id="fruit" value="$6.00">FRUIT GUMMIES $6.00</button>
+    <button class="Vbutton" type="button" id="lime" value="$2.00">LIME COLA $2.00</button>
+    <button class="Vbutton" type="button" id="salt" value="$3.00">SALTED PEANUTS $3.00</button>
+    <button class="Vbutton" type="button" id="chocolate" value="$4.00">CHOCOLATE BAR $4.00</button>
+    <button class="Vbutton" type="button" id="fruit" value="$6.00">FRUIT GUMMIES $6.00</button>
 <style>
-    button {
+    .Vbutton {
   background-color: rgb(233, 171, 182);
   border: none;
   color: white;
@@ -37,13 +38,13 @@
 <form id="makeMoneyForm">MAKE MONEY >>>>>>>>>
 <p>
   <label for="count">How many?
-    <input type="number" id="count">
+    <input type="number" id="count"/>
   </label>  
 </p>
 
 <p>
    <label for="coin">Which coin?</label>
-    <select id="coinType">
+    <select id="coin">
     <option value="penny">Penny</option>
     <option value="nickle">Nickel</option>
     <option value="dime">Dime</option>
@@ -51,11 +52,12 @@
     </select> 
 </p>
 <p>
-    <button type="submit" class="button" id="click-button">Make that money !!!</button>
+    <button type="submit" class="button">Make that money !!!</button>
     <!-- <button class="button" id="click-remove">Remove coin</button> -->
 </p>
-</form>
 <div id="circle"></div>
+</form>
+
 
 <script src="script.js"></script>   
 

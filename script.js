@@ -51,14 +51,13 @@
    const coinSelect = document.getElementById("coin");
    const coinContainer = document.querySelector(".coin-container");
 
-   makeMoneyForm.addEventListener("click-button", (event) => {
+   makeMoneyForm.addEventListener("click", (event) => {
        event.preventDefault();
-       debugger;
 
        let count = countInput.value;
        let coin = coinSelect.value;
        for (let i =0; i < count; i++) {
-           const newCoin = document.createElement("div");
+           const newCoin = document.createElement("circle");
            newCoin.classList.add("coin",coin);
             newCoin.addEventListener("click", () => {
                 newCoin.remove();

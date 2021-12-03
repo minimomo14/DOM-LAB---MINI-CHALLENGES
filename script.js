@@ -46,80 +46,23 @@
 
     //MAKE MONEY
 
-    let add_amount = document.getElementById("how-many");
-    let coin_type = document.getElementById("coinType");
-    let click_submit = document.getElementById("click-button");
-    let remove_coin = document.getElementById("click-remove");
-    let theList = document.getElementById("the-list");
+   const makeMoneyForm = document.getElementById("makeMoneyForm");
+   const countInput = document.getElementById("count");
+   const coinSelect = document.getElementById("coin");
+   const coinContainer = document.querySelector(".coin-container");
 
-    function myFunction() {
-        document.getElementById("circle").style.animation = "circle"
-    }
+   makeMoneyForm.addEventListener("click-button", (event) => {
+       event.preventDefault();
+       debugger;
 
-    form.addEventListener("click-button", (event) => {
-        event.preventDefault();
-        let enter_amount = add_amount.value;
-
-        const coinItem = document.createElement("li");
-        coinItem.innerText = enter_amount;
-        coinItem.style.color = color;
-        
-        if (enter_amount === true) {
-            coinItem.classList.add("circle");
+       let count = countInput.value;
+       let coin = coinSelect.value;
+       for (let i =0; i < count; i++) {
+           const newCoin = document.createElement("div");
+           newCoin.classList.add("coin",coin);
+            newCoin.addEventListener("click", () => {
+                newCoin.remove();
+            });
+            makeMoneyForm.append(newCoin);
         }
-    
-    theList.append(coinItem);
-
-    });
-
-   /* all_init.addEventListener("click-button", (event) => {
-        event.preventDefault();
-        let amount = amountInput.value;
-        let coinType = coinTypeInput.value;
-        //console.log(amount, coinType);
-
-    for (i = 0 ; i < amount; i++) {
-    const eachCoin = document.createElement("the-list");
-    all_init.addEventListener("click-button");
-    }
-
-    eachCoin.addEventListener("click-remove", () => {
-        eachCoin.remove();
-    
-    });
-
-
-    all_init.append("coinType");
-    }
-
-/* document.querySelector("button").addEventListener("click", (event) => {
-    event.preventDefault();
-    //console.log("button was clicked");
-    let clickLime = document.getElementById("lime").value;
-    let clickSalt = document.getElementById("salt").value;
-    let clickChocolate = document.getElementById("chocolate").value;
-    let clickFruit = document.getElementById("fruit").value;
-    let theTotal = clickLime + clickSalt + clickChocolate + clickFruit;
-    //document.getElementById("total").innerHTML = "Total:"+ theTotal;
-})
-*/
-/*
-let enterCoin = document.getElementById("how-many");
-let eachCoin = document.getElementById("coins");
-let submit = document.getElementById("click-button");
-
-//form.addEventListener("click-button")
-form.addEventListener("click-button", event => {
-    event.preventDefault();
-    const addCoin = numberInput.value;
-    const coinValue = coinInput.value;
-    const submit_button = submit.click;
-
-    let add_newCoin = document.createElement("shape")
-    add_newCoin.classList.add("#circle");
-    if (submit_button === true) {
-        add_newCoin.classList.add("circle")
-
-    }
-    shape.appendChild(add_newCoin);
-}); */
+   });

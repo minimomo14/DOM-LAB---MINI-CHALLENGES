@@ -34,39 +34,27 @@
 <div></div>
 <div></div>
 
-<form id="form">MAKE MONEY >>>>>>>>>
+<form id="makeMoneyForm">MAKE MONEY >>>>>>>>>
 <p>
-  <label for="how-many">How many?
-    <input type="number" id="how-many">
+  <label for="count">How many?
+    <input type="number" id="count">
   </label>  
 </p>
 
 <p>
-   <label for="coinType">Which coin?</label>
+   <label for="coin">Which coin?</label>
     <select id="coinType">
-    <option>Penny</option>
-    <option>Nickel</option>
-    <option>Dime</option>
-    <option>Quarter</option>
+    <option value="penny">Penny</option>
+    <option value="nickle">Nickel</option>
+    <option value="dime">Dime</option>
+    <option value="quarter">Quarter</option>
     </select> 
 </p>
 <p>
-    <button type="submit" id="click-button" onclick="myFunction()">Make that money !!!</button>
-    <button id="click-remove">Remove coin</button>
+    <button type="submit" class="button" id="click-button">Make that money !!!</button>
+    <!-- <button class="button" id="click-remove">Remove coin</button> -->
 </p>
 </form>
-<style>
-  #circle {
-  width: 50px;
-  margin: 0;
-  padding: 25px;
-  background-color: rgb(29, 209, 191);
-  border-radius: 50%;
-  text-align: center;
-  display: inline-block;
-  }
-</style>
-
 <div id="circle"></div>
 
 <script src="script.js"></script>   

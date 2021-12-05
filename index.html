@@ -8,7 +8,7 @@
     <title>DOM-mini-challenge</title>
 </head>
 <body>
-    <form>Vending Machine
+    <form clss="Vending Machine"> <h2>Vending Machine</h2>
 
     <p id="total"></p>
 
@@ -19,7 +19,8 @@
 <style>
     .Vbutton {
   background-color: rgb(233, 171, 182);
-  border: none;
+  border: inline-block;
+  border-radius: 5px;
   color: white;
   padding: 20px;
   text-align: center;
@@ -35,7 +36,7 @@
 <div></div>
 <div></div>
 
-<form id="makeMoneyForm">MAKE MONEY >>>>>>>>>
+<form id="makeMoneyForm"> <h2>MAKE MONEY >>>>>>>>></h2>
 <p>
   <label for="count">How many?
     <input type="number" id="count"/>
@@ -51,13 +52,23 @@
     <option value="quarter">Quarter</option>
     </select> 
 </p>
+
 <p>
     <button type="submit" class="button">Make that money !!!</button>
     <!-- <button class="button" id="click-remove">Remove coin</button> -->
 </p>
 <div id="circle"></div>
 </form>
+<div></div>
+<div></div>
+<div></div>
 
+<div id="light-bulb"><h2>LIGHT BULB</h2>
+<button id="on">ON</button>
+<button id="off">OFF</button>
+<button id="toggle">TOGGLE</button>
+<button id="end">END</button>
+</div>
 
 <script src="script.js"></script>   
 

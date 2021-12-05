@@ -1,3 +1,4 @@
+  //Vending machine
     let clickLime = document.getElementById("lime");
     let clickSalt = document.getElementById("salt");
     let clickChocolate = document.getElementById("chocolate");
@@ -51,7 +52,7 @@
    const coinSelect = document.getElementById("coin");
    const coinContainer = document.querySelector(".coin-container");
 
-   makeMoneyForm.addEventListener("click", (event) => {
+   makeMoneyForm.addEventListener("submit", (event) => {
        event.preventDefault();
 
        let count = countInput.value;
@@ -65,3 +66,34 @@
             makeMoneyForm.append(newCoin);
         }
    });
+
+//Lightbulb
+const lightBulb = document.getElementById("light-bulb");
+
+let lightOn = document.getElementById("on");
+lightOn.addEventListener("click", event => {
+    lightBulb.style.backgroundColor = ("green");
+});
+
+let lightOff = document.getElementById("off");
+lightOff.addEventListener("click", event => {
+    lightBulb.style.backgroundColor = ("red");
+});
+
+let lightToggle = document.getElementById("toggle");
+lightToggle.addEventListener("click", event => {
+   if (lightBulb.style.backgroundColor === "red") {
+       lightBulb.style.backgroundColor = ("green");
+   } else if (lightBulb.style.backgroundColor === "green") {
+       lightBulb.style.backgroundColor = ("red");
+   }
+})
+
+let theEnd = document.getElementById("end");
+theEnd.addEventListener("click", event => {
+    lightBulb.remove();
+    lightOn.disable = true;
+    lightOff.disable = true;
+    lightToggle.disable = true;
+    theEnd.disable = true;
+})
